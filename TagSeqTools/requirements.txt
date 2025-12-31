@@ -1,0 +1,12 @@
+# TagSeqTools Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+biopython>=1.78
+regex>=2021.8.3
+
+# Development dependencies (optional)
+# pytest>=6.0
+# pytest-cov>=2.0
+# black>=21.0
+# flake8>=3.9
