@@ -165,62 +165,6 @@ tagseqtools quant \
     [--outdir <output_dir>]
 ```
 
-## Output Structure
-
-```
-output_directory/
-├── tagseqtools.log              # Complete pipeline log
-├── QC_results/                  # FastQC reports
-│   ├── sample_fastqc.html
-│   ├── sample.tag_fastqc.html
-│   └── sample.nontag_fastqc.html
-├── Mapping_statistics/          # Alignment statistics
-│   ├── trans.NAD.paf           # Transcriptome alignments (tagged)
-│   ├── trans.nonNAD.paf        # Transcriptome alignments (non-tagged)
-│   ├── genome.NAD.paf          # Genome alignments (tagged)
-│   ├── genome.nonNAD.paf       # Genome alignments (non-tagged)
-│   ├── NAD_map-*.html          # Mapping QC reports
-│   └── nonNAD_map-*.html
-├── Mapping_results/             # BAM files for visualization
-│   ├── NAD.sort.bam            # Sorted BAM (tagged reads)
-│   ├── NAD.sort.bam.bai        # BAM index
-│   ├── nonNAD.sort.bam         # Sorted BAM (non-tagged reads)
-│   ├── nonNAD.sort.bam.bai
-│   ├── NAD_Mapping_statistics.txt
-│   ├── nonNAD_Mapping_statistics.txt
-│   └── Tag_statistics.txt      # Tagging statistics
-└── Quantification_results/      # Quantification output
-    ├── trans.NAD.paf
-    ├── trans.nonNAD.paf
-    ├── NAD_total_counts.txt    # Gene-level counts
-    ├── NAD_total_isoform_counts.txt  # Isoform-level counts
-    └── Counting_statistics.txt
-```
-
-## Project Structure
-
-```
-TagSeqTools/
-├── README.md                    # This file
-├── LICENSE                      # Apache 2.0 license
-├── setup.py                     # Package installation script
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore rules
-├── tagseqtools/                 # Main package directory
-│   ├── __init__.py             # Package initialization
-│   ├── cli.py                  # Command-line interface
-│   ├── tagseek.py              # TagSeek module for tag identification
-│   ├── tagseqquant.py          # TagSeqQuant module for alignment/quantification
-│   ├── utils.py                # Utility functions
-│   └── r_scripts/              # R scripts for quantification
-│       └── TagSeqQuant.r
-├── tests/                       # Unit tests
-│   └── __init__.py
-└── examples/                    # Example data and usage
-    └── demo/
-        └── README.md
-```
-
 ### Module Descriptions
 
 | Module | Description |
@@ -244,7 +188,6 @@ TagSeqTools/
 | minimap2 | >= 2.12 | Sequence alignment |
 | samtools | >= 1.7 | BAM file processing |
 | FastQC | >= 0.11.4 | Read quality control |
-| R | >= 3.2.1 | Quantification analysis |
 
 ## Citation
 
